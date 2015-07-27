@@ -29,7 +29,7 @@
   "eqeqeq": true,
 
   // Enforce tab width of 2 spaces.
-  "indent": 2,
+  "indent": 4,
 
   // Prohibit use of a variable before it is defined.
   "latedef": true,
@@ -58,5 +58,13 @@
    */
 
   // Suppress warnings about == null comparisons.
-  "eqnull": true
+  "eqnull": true,
+
+  // Require curly braces around all multi-line blocks
+  "curly": true,
+
+  // Permitted globals. If using Angular they should be wrapped in a Constant.
+  "globals": {
+      "console": true
+  }
 }
