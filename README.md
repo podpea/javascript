@@ -39,6 +39,8 @@
 
 ## Types
 
+  This is just some helpful info.
+
   - **Primitives**: When you access a primitive type you work directly on its value.
 
     + `string`
@@ -198,7 +200,6 @@
 ## Strings
 
   - Use single quotes `''` for strings. 
-  - If you really want to avoid escaping, switch to double quotes for that string.
 
     ```javascript
     // bad
@@ -213,8 +214,8 @@
     // good
     var fullName = 'Bob ' + this.lastName;
     
-    // ok
-    var thing = "Bobcat's Mat";
+    // good
+    var thing = 'Bobcat\'s Mat';
     ```
 
   - Strings longer than 80 characters should be written across multiple lines using string concatenation.
@@ -298,6 +299,8 @@
 
 ## Functions
 
+  Info
+
   - Function expressions:
 
     ```javascript
@@ -351,7 +354,7 @@
     }
     ```
     
-    - Always favor returning early rather than writing in or nesting `if` statements
+    - Always **favor** returning early rather than writing nested `if` statements
     
     ```javascript
     // bad
@@ -414,7 +417,7 @@
 
 ## Variables
 
-  - Always use `var` to declare variables. Not doing so will result in global variables. We want to avoid polluting the global namespace. Captain Planet warned us of that.
+  - Always use `var` to declare variables. Not doing so will result in global variables. We want to avoid polluting the global namespace. Captain Planet warned us of that (he's a hero..).
 
     ```javascript
     // bad
@@ -538,6 +541,8 @@
 
 ## Hoisting
 
+  This is informational - be aware of hoisting.
+
   - Variable declarations get hoisted to the top of their scope, but their assignment does not.
 
     ```javascript
@@ -608,7 +613,7 @@
     }
     ```
 
-  - Function declarations hoist their name and the function body.
+  - Function declarations hoist their name and the function body. This can be nice because it removes functions that just contain implementation details from the main flow of the code when reading it - providing your functions are named well.
 
     ```javascript
     function example() {
@@ -684,7 +689,7 @@
     // ..
   }
   
-  - If you have a complex or difficult to read condition, move it into a variable
+  - If you have a complex or difficult to read condition, move it into a variable. Just make a judgement.
   
   ```javascript
   // bad
@@ -705,7 +710,7 @@
 
 ## Blocks
 
-  - Use braces with all multi-line blocks. Consistently readable, better diffs, less error-prone.
+  - Use braces with all multi-line blocks unless they're super short. Consistently readable, better diffs, less error-prone.
 
     ```javascript
     // bad
@@ -713,12 +718,12 @@
       return false;
 
     // good
-    if (test) return false;
-
-    // good
     if (test) {
       return false;
     }
+    
+    // good
+    if (test) return false;
 
     // bad
     function() { return false; }
@@ -1673,8 +1678,8 @@ var amazingApp = require('./amazingApp');
 
 ## Lodash
 
-- Always use Lodash
-- Use Lodash variants of built-in functions for consistency where possible
+- Always use Lodash over its alternatives
+- Use Lodash variants of built-in functions if it enhances readability or performance
 - Use multi-line chaining
 
 ## ECMAScript 5 Compatibility
